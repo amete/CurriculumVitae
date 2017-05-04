@@ -1,0 +1,304 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 		%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+%\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage[cm]{fullpage}
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+% Line break in table cell
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+%\defaultfontfeatures{Mapping=tex-text} 						%%Commented out by Serhan
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin} 		%%Commented out by Serhan
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt} % Used to be : 0-3-3 
+%Tweak a bit the top margin
+\addtolength{\voffset}{1cm}
+
+%Italian hyphenation for the word: ''corporations''
+%\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alaettin Serhan Mete with \XeTeX\  \today\ %for 
+%			%{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE--------------------\vspace{3mm}
+\par{\centering
+		{\Huge \textsc{Alaettin Serhan Mete}
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Place and Date of Birth:} 			& Ankara, Turkey  | 30 April 1984 							\\
+    \textsc{Address:}   					& 355, Rue Simone Veil, Saint-Genis-Pouilly, 01630, France		\\
+    \textsc{Phone:}     						& +41 77 225 9483										\\
+    \textsc{E-mail:}     						& \href{mailto:serhanmete@gmail.com}{serhanmete@gmail.com}	\\
+    \textsc{Inspire:}						& \href{https://inspirehep.net/author/profile/A.S.Mete.1}{https://inspirehep.net/author/profile/A.S.Mete.1}
+\end{tabular}
+
+%Section: Research Interests
+\vspace{3mm}
+\section{Research Interests}
+Exotic and SUSY searches for physics beyond the Standard Model with main focus on direct production of 
+heavy gauge bosons, top squarks, charginos/neutralinos and sleptons. 
+Currently working on the ATLAS experiment at the Large Hadron Collider and based at 
+the European Organization for Nuclear Research, Geneva, Switzerland.
+
+%Section: Education
+\vspace{3mm}
+\section{Education}
+
+\begin{tabular}{r | p{15.5cm}}
+\textsc{2006--2012}				&  Ph.D. in \textsc{Physics} - \textbf{Iowa State University}, Ames, IA \\ 
+							& Adviser\phantom{Ttle} : Prof. James H. Cochran \\
+							& Thesis Title : {\it``Search for a heavy charged gauge boson decaying to a 
+							    muon and a neutrino in $1\ fb^{-1}$ of proton-proton collisions 
+							    at $\sqrt{s}$ = 7 TeV using the ATLAS Detector''}, \href{http://cds.cern.ch/record/1454661}{CERN-THESIS-2012-063} \\	
+\multicolumn{2}{c}{} \\
+\textsc{2002--2006} 				& B.Sc. in \textsc{Physics}, \textbf{Middle East Technical University}, Ankara	\\
+							& Graduation Project Supervisor : Prof. Nam{\i}k Kemal \textsc{PAK}					\\
+							& Graduation Project Title \phantom{rvsor} : \it{``Time Dependent Wave Packet Collisions''} 	\\
+							& \normalsize \textsc{High Honor Student}										\\
+\end{tabular}
+
+%Section: Positions Held
+\vspace{3mm}
+\section{Positions Held}
+\begin{tabular}{r|p{15.5cm}}
+\textsc{2012--\phantom{0000}}		&		Post-Doctoral Research Scholar, Department of Physics and Astronomy, 	\\
+							&		{\bf University of California, Irvine}, CA, USA  						\\
+%							&		{\bf The European Organization for Nuclear Research (CERN)}, Switzerland \\
+\multicolumn{2}{c}{} \\
+\textsc{2008--2012}				&		Research Assistant, Department of Physics and Astronomy, 			\\
+							&		{\bf Iowa State University}, Ames, IA, USA and 						\\
+							& 		{\bf Brookhaven National Laboratory}, Upton, NY, USA (since 2009)		\\
+\multicolumn{2}{c}{} \\
+\textsc{2006--2008}				&		Teaching Assistant, Department of Physics and Astronomy, 			\\
+							&		{\bf Iowa State University}, Ames, IA, USA 						\\
+\end{tabular}
+
+%Section: Research and Teaching experience
+\vspace{3mm}
+\section{Research Experience}
+
+\begin{tabular}{r | p{12cm}}
+\multicolumn{1}{r|}{Analysis Contact}				& ATLAS Stop2L SUSY search (Moriond 2017)  \hfill (2016--\phantom{0000})					\\
+\multicolumn{1}{r|}{Editorial Board Member}		& ATLAS compressed SUSY EWK scenarios search \hfill (2016--\phantom{0000})				\\
+\multicolumn{1}{r|}{Editorial Board Member}		& ATLAS 2$\tau$ SUSY EWK search \hfill (2016--\phantom{0000})				\\
+\multicolumn{1}{r|}{Conference Note Editor}		& ATLAS Stop2L SUSY search (ICHEP 2016) \hfill (2016)					\\
+\multicolumn{1}{r|}{Paper Editor}				& ATLAS legacy of Run-I SUSY EWK searches \hfill (2015) 		\\ 
+\multicolumn{1}{r|}{Subgroup Convener}			& ATLAS SUSY EWK searches \hfill (2014--2015)				\\
+\multicolumn{1}{r|}{Analysis Contact/ Paper Editor}	& ATLAS 2L SUSY EWK search \hfill (2013--2014)				\\
+\multicolumn{1}{r|}{Paper Editor}				& ATLAS $W^{\prime}\rightarrow\ell\nu$ $\sqrt{s} = 8\ \mathrm{TeV}$  search \hfill (2014)		\\
+\multicolumn{1}{r|}{Analysis Contact/ Paper Editor}	& ATLAS $W^{\prime}\rightarrow\ell\nu$ $\sqrt{s} = 7\ \mathrm{TeV}$ search \hfill (2011)		\\
+\multicolumn{1}{r|}{Software Developer}			& NSW sTGC trigger simulation \hfill (2015--\phantom{0000})	\\
+\multicolumn{1}{r|}{Software Developer}			& $E_{\mathrm{T}}^{\mathrm{miss}}$ Run-II EDM and reconstruction \hfill (2014--\phantom{0000})	\\
+\multicolumn{1}{r|}{Trigger Monitoring Expert}		& Author of {\it OnlineRatesChecker} package \hfill (2011--2012)	\\
+\multicolumn{1}{r|}{DAQ/HLT Shifter}				& Online DAQ/HLT shifts	\hfill (2010--2011)					\\
+\end{tabular}
+
+%Section: Teaching experience
+\vspace{3mm}
+\section{Teaching Experience}
+
+\begin{tabular}{r | p{14.05cm}}
+\multicolumn{1}{r|}{Teaching Assistant}		& Phys. 111 - General Physics \hfill ( 1 semester\phantom{s})				\\
+\multicolumn{1}{r|}{}						& Phys. 221 - Introduction to Classical Physics I  \hfill ( 2 semesters) 		\\ 
+\multicolumn{1}{r|}{}						& Phys. 321 - Introduction to Modern Physics I \hfill ( 1 semester\phantom{s}) 	\\
+\multicolumn{1}{r|}{}						& Phys. 564 - Advanced Classical Mechanics \hfill ( 1 semester\phantom{s})	\\
+\multicolumn{1}{r|}{}						& Phys. 571 - Electricity and Magnetism I \hfill ( 2 semesters) 				\\
+\end{tabular}
+
+% Publications
+\vspace{3mm}
+\section{Publications}
+
+\begin{itemize}
+	\item ATLAS Collaboration,
+	``Dark matter interpretations of ATLAS searches for the electroweak production of supersymmetric particles in $\sqrt{s} = 8\ \mathrm{TeV}$ proton-proton collisions'',
+	J.\ High\ Energy\ Phys.\ {\bf 09} (2016) 175,
+	\href{http://arxiv.org/abs/1608.00872}{arxiv:1608.00872 [hep-ex]}
+	\item ATLAS Collaboration,
+	``Search for the electroweak production of supersymmetric particles in $\sqrt{s} = 8\ \mathrm{TeV}$ $pp$ collisions with the ATLAS detector'',
+	Phys.\ Rev.\ {\bf D93} (2016) 052002,
+	\href{http://arxiv.org/abs/1509.07152}{arxiv:1509.07152 [hep-ex]}
+	\item J. Abdallah {\it et al.},
+	``Simplified Models for Dark Matter Searches at the LHC'',
+	Phys.\ Dark\ Univ.\ {\bf 9-10} (2015) 8-23,
+	\href{http://arxiv.org/abs/1506.03116}{arxiv:1506.03116 [hep-ph]}
+	\item ATLAS Collaboration,
+	``Search for direct pair production of a chargino and a neutralino decaying to the 125 GeV Higgs boson in $\sqrt{s} = 8\ \mathrm{TeV}$ $pp$ collisions with the ATLAS detector'',
+	Eur.\ Phys.\ J.\ {\bf C75} (2015) 208,
+	\href{http://arxiv.org/abs/1501.07110}{arxiv:1501.07110 [hep-ex]}
+	\item ATLAS Collaboration,
+	``Search for new particles in events with one lepton and missing transverse momentum in $pp$ collisions at $\sqrt{s} = 8\ \mathrm{TeV}$ with the ATLAS detector'',
+	J.\ High\ Energy\ Phys.\ {\bf 09} (2014) 037,
+	\href{http://arxiv.org/abs/1407.7494}{arxiv:1407.7494 [hep-ex]}
+	\item ATLAS Collaboration, 
+	``Search for the direct production of charginos, neutralinos and staus in final states with at least two hadronically decaying taus and missing transverse momentum in $pp$ collisions at $\sqrt{s} = 8\ \mathrm{TeV}$ with the ATLAS detector'',
+	J.\ High\ Energy\ Phys.\ {\bf 10} (2014) 096,
+	\href{http://arxiv.org/abs/1407.0350}{arxiv:1407.0350 [hep-ex]}
+	\item ATLAS Collaboration, 
+	``Search for direct production of charginos, neutralinos and sleptons in final states with two leptons and missing transverse momentum in $pp$ collisions at 
+	$\sqrt{s} = 8\ \mathrm{TeV}$ with the ATLAS detector'', 
+	J.\ High\ Energy\ Phys.\ {\bf 05} (2014) 071, 
+	\href{http://arxiv.org/abs/1403.5294}{arxiv:1403.5294 [hep-ex]}
+	\item ATLAS Collaboration, 
+	``Search for direct production of charginos and neutralinos in events with three leptons and missing transverse momentum in $\sqrt{s} = 8\ \mathrm{TeV}$ $pp$ collisions with the ATLAS detector'',
+	J.\ High\ Energy\ Phys.\ {\bf 04} (2014) 169,
+	\href{http://arxiv.org/abs/1402.7029}{arxiv:1402.7029 [hep-ex]}
+	\item ATLAS Collaboration,
+	``ATLAS search for a heavy gauge boson decaying to a charged lepton and a neutrino in $pp$ collisions at $\sqrt{s} = 7\ \mathrm{TeV}$'',
+	Eur.\ Phys.\ J.\ {\bf C72} (2012) 2241,
+	\href{http://arxiv.org/abs/1209.4446}{arxiv:1209.4446 [hep-ex]}
+	\item ATLAS Collaboration,
+	``Search for direct production of charginos and neutralinos in events with three leptons and missing transverse momentum in $\sqrt{s} = 7\ \mathrm{TeV}$ $pp$ collisions with the ATLAS detector'', 
+	Phys.\ Lett.\ {\bf B718} (2013) 841, 
+	\href{http://arxiv.org/abs/1208.3144}{arxiv:1208.3144 [hep-ex]}
+	\item ATLAS Collaboration,
+	``Search for direct slepton and gaugino production in final states with two leptons and missing transverse momentum with the ATLAS detector in $pp$ collisions at $\sqrt{s} = 7\ \mathrm{TeV}$'', 
+	Phys.\ Lett.\ {\bf B718} (2013) 879, \href{http://arxiv.org/abs/1208.2884}{arxiv:1208.2884 [hep-ex]}
+	\item ATLAS Collaboration,
+	``Search for a heavy gauge boson decaying to a charged lepton and a neutrino in $1\ \mathrm{fb}^{-1}$ of $pp$ collisions at $\sqrt{s} = 7\ \mathrm{TeV}$ using the ATLAS detector'', 
+	Phys.\ Lett.\ {\bf B705} (2011) 28, 
+	\href{http://arxiv.org/abs/arXiv:1108.1316}{arxiv:1108.1316 [hep-ex]}
+	\item ATLAS Collaboration,
+	``Search for high-mass states with lepton plus missing transverse momentum in proton-proton collisions at $\sqrt{s} = 7\ \mathrm{TeV}$ with the ATLAS detector'', 
+	Phys.\ Lett.\ {\bf B701} (2011) 50, 
+	\href{http://arxiv.org/abs/1103.1391}{arxiv:1103.1391 [hep-ex]}
+	\item S.K. Gupta, A.S. Mete and G. Valencia,
+	``CP violating anomalous top quark couplings at the LHC'',  
+	Phys.\ Rev.\ {\bf D80} (2009) 034013, 
+	\href{http://arxiv.org/abs/0905.1074}{arxiv:0905.1074 [hep-ph]}
+\end{itemize}
+
+\newpage
+
+% Conference Notes
+\vspace{3mm}
+\section{Conference Notes and Proceedings}
+
+\begin{itemize}
+	\item ATLAS Collaboration,
+	``Search for electroweak production of charginos and neutralinos in multilepton final states at $\sqrt{s}=13\ \mathrm{TeV}$ with the ATLAS detector'',
+	\href{https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2016-096/}{ATLAS-CONF-2016-096 (2016)}
+	\item ATLAS Collaboration, 
+	``Search for direct top squark pair production and Dark Matter production in final states with two leptons in $\sqrt{s}=13\ \mathrm{TeV}$ $pp$ collisions using $13\ \mathrm{fb}^{-1}$ of ATLAS data'',
+	\href{https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2016-076/}{ATLAS-CONF-2016-076 (2016)}
+	\item ATLAS Collaboration,
+	``Search for supersymmetry with two same-sign leptons or three leptons using $13.2\ \mathrm{fb}^{-1}$ of $\sqrt{s}=13\ \mathrm{TeV}$ $pp$ collision data collected by the ATLAS detector'',
+	\href{https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2016-037/}{ATLAS-CONF-2016-037 (2016)} 
+	\item ATLAS Collaboration, 
+	``Search for direct top squark pair production in final states with two leptons in $\sqrt{s}=13\ \mathrm{TeV}$ $pp$ collisions using $3.2\ \mathrm{fb}^{-1}$ of ATLAS data'',
+	\href{https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2016-009/}{ATLAS-CONF-2016-009 (2016)} 	
+	\item ATLAS Collaboration, 
+	``Search for high-mass states with one lepton plus missing transverse momentum in $pp$ collisions at $\sqrt{s}= 8\ \mathrm{TeV}$ with the ATLAS detector'',
+	\href{https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2014-017/}{ATLAS-CONF-2014-017 (2014)} 
+	\item ATLAS Collaboration, 
+	``Search for direct-slepton and direct-chargino production in final states with two opposite-sign leptons, missing transverse momentum 
+	and no jets in $20\ \mathrm{fb}^{-1}$ of $pp$ collisions at $\sqrt{s} = 8\ \mathrm{TeV}$ with the ATLAS detector'', 
+	\href{https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2013-049/}{ATLAS-CONF-2013-049 (2013)} 
+	\item A. S. Mete, 
+	``New Physics searches with ATLAS'', 
+	EPJ\ Web\ Conf.\ {\bf 70} (2014) 00050, 
+	\href{https://cds.cern.ch/record/1478973}{ATL-PHYS-PROC-2012-201 (2012)}
+	\item ATLAS Collaboration, 
+	``Search for high-mass states with one muon plus missing transverse momentum in proton-proton collisions at $\sqrt{s} = 7\ \mathrm{TeV}$ with the ATLAS detector", 
+	\href{https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2011-082/}{ATLAS-CONF-2011-082 (2011)}
+\end{itemize}
+
+%Section: Talks and Posters
+\vspace{3mm}
+%\section{Talks and Posters}
+\section{Talks}
+
+\begin{itemize}
+	\item ``SUSY at ATLAS'', (Re)interpreting the results of new physics searches at the LHC (12/2016),
+	\\ {\bf (On behalf of the ATLAS Collaboration)}
+	\item ``SUSY $3^{\mathrm{rd}}$ Generation Review'', ATLAS SUSY Workshop at Sussex (4/2016)
+	\item ``EWK SUSY Searches'', ATLAS Physics Workshop - Ready for Run-2  (11/2014)
+	\item ``Searches for electroweakinos with Higgs in the final state'', ATLAS BSM Higgs Workshop (10/2014)
+	\item  ``Search for dark matter in the mono-lepton channel at the LHC'', Dark Matter @ LHC (9/2014), 
+	\\ {\bf (On behalf of the ATLAS and CMS Collaborations)}
+	\item ``ATLAS Direct Electroweak SUSY Search in 2 OS Leptons + Missing Transverse Momentum Final State'', 
+	UC Irvine Particle Physics Seminar (3/2014)
+	\item ``ATLAS Direct Electroweak Searches'', Oregon Terascale Workshop (3/2014)
+	\item ``ATLAS Direct Electroweak Searches'', CERN Collider Cross Talk (8/2013)
+	\item ``2 Leptons ($e$/$\mu$/$\tau$) + MET'', ATLAS SUSY Workshop at Nikhef (4/2013)
+	\item ``New Physics searches with ATLAS'', International Conference on New Frontiers in Physics (6/2012),
+	\\ {\bf (On behalf of the ATLAS Collaboration)}
+%	\item ``Search for $W^{\prime}$ and $Z^{\prime}$ with ATLAS'', 105$^{\mathrm{th}}$ LHCC Meeting (3/2011),
+%	{\bf (On behalf of the ATLAS Collaboration - poster)}
+%	\item ``Spin Correlation and W Polarization in $t\bar{t}\rightarrow e\mu$ events'', 
+%	ATLAS Physics Workshop of the Americas at New York University (8/2009), {\bf (poster)}
+	\item ``Background studies and spin correlation expectations in $t\bar{t}$ events in the $e/\mu$ decay channel at the LHC'',
+	American Physical Society April Meeting (5/2009), {\bf (On behalf of the ATLAS Collaboration)}
+\end{itemize} 
+
+%Section: Programming
+\vspace{3mm}
+\section{Programming}
+\begin{tabular}{rl}
+Operating Systems: 	& Mac OS X - Linux SLC5/SLC6 - Windows XP/Vista/7/8/10 	\\
+Languages: 		& C, C++, Java, Python, Bash scripting, SQL, \LaTeX				\\
+Softwares: 		& Pythia, MC@NLO, MadGraph, Jimmy, Herwig, Herwig++, ROOT,		\\
+				& Matlab, Mathematica, ATLAS Athena 							\\
+\end{tabular}
+
+%Section: Languages
+\vspace{3mm}
+\section{Languages}
+
+\begin{tabular}{rl}
+\textsc{Turkish:}	& Native					\\
+\textsc{English:}	& Full Professional Proficiency	\\
+\textsc{French:}		& Elementary Proficiency		\\
+\end{tabular}
+
+\end{document}
