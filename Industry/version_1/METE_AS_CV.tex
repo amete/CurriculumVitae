@@ -1,0 +1,235 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+%%%%%%
+% A little bit of hacking for cventry
+\renewcommand*{\cventry}[7][.25em]{
+  \begin{tabular*}{0.98\maincolumnwidth}{l@{\extracolsep{\fill}}r}%
+    {\bfseries #4} & {\bfseries #5}\\%
+    {\itshape #3\ifthenelse{\equal{#6}{}}{}{, #6}} & {\itshape #2}\\%
+  \end{tabular*}%
+  \ifx&#7&%
+  \else{\\%
+    \begin{minipage}{0.98\maincolumnwidth}%
+      \small#7%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+%%%%%%
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.9]{geometry}
+\geometry{top=2cm}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+% personal data
+\name{Alaettin~Serhan}{Mete, Ph.D.}
+%\title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+\address{355 Rue Simone Veil, Saint-Genis Pouilly, 01630, France}{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+41-77-225-9483}                   % optional, remove / comment the line if not wanted
+\email{serhanmete@gmail.com}                               % optional, remove / comment the line if not wanted
+\homepage{www.linkedin.com/in/alaettin-serhan-mete-ph-d-340b9288}                      % optional, remove / comment the line if not wanted
+\extrainfo{\href{https://github.com/amete}{https://github.com/amete}}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+%\vspace*{-10mm} % Eat up some space after title
+
+%\small{Undergraduate electrical and electronic engineer completing the final year of a master's degree. Passionate about science, with strong technical, business, and interpersonal skills for working in a team and successfully completing a project.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Objectives
+%\vspace{4pt}
+%\section{Qualifications and Objectives}
+%
+%I am a passionate and an experienced data analyst accustomed to dealing 
+%with large-scale datasets to answer intriguing and challenging questions in the context of physics.
+%I have been a member of a highly competitive and international  collaboration of scientists for about 10 years at CERN,
+%lead and contributed to a number of peer-reviewed publications searching for new physics, 
+%scrutinized my peers' work, and mentored students with different backgrounds.
+%Having developed and perfected a wide range of skills in data analysis, 
+%programming, leadership and communication I am looking forward to tackle 
+%interesting questions outside of physics as a full-time Data Scientist.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Skills and Work Experience
+\section{Skills and Work Experience}
+
+\begin{itemize}
+
+\vspace{6pt}
+
+\item {\textbf{Data Analysis:} Conducted scientific data analysis in a highly competitive and international environment
+{\begin{itemize}\setlength\itemindent{6pt}
+	 \item Served as a physicist and data analyst for new physics searches at the ATLAS experiment at CERN since 2007
+	 \item Performed a multitude of likelihood-based statistical analyses on a petabyte-scale dataset resulting in publications
+	 \item Developed expertise on optimization techniques, statistical tests, data-driven predictions, Monte Carlo simulation
+	 \item Implemented predictive modeling algorithms, tested and validated them using simulated and recorded data
+\end{itemize}}%
+}
+
+\vspace{6pt}
+
+\item {\textbf{Programming:} Developed and maintained monitoring and data analysis software packages in multiple languages
+{\begin{itemize}\setlength\itemindent{6pt}
+	\item Proficient in C++ (10 years), Bash scripting (10 years), Python (5+ years), \LaTeX\ (5+ years)
+	\item Intermediate knowledge in Java (1+ year), SQL (1+ year), R (1 year)
+	\item Developed, contributed, and maintained large scale projects using subversion software (eg. svn, git)
+	\item Worked within a distributed big data framework for 7+ years at CERN analyzing terabytes of data
+	\item Contributed to the development of data quality monitoring software for the ATLAS TDAQ system at CERN
+\end{itemize}}%
+}
+
+\vspace{6pt}
+
+\item {\textbf{Leadership:} Lead a multitude of scientific working groups aiming to achieve time critical goals
+{\begin{itemize}\setlength\itemindent{6pt}
+	\item Managed teams of 5 to over 50 physicists leading to journal publications and public notes meeting strict deadlines
+	\item Delegated tasks placing emphasis on individual strengths, organized, scheduled and chaired regular meetings
+	\item Directly co-authored over 5 and contributed to more than 10 peer-reviewed journal publications
+	\item Reviewed and scrutinized works of colleagues to ensure accurate and high quality results
+\end{itemize}}%
+}
+
+\vspace{6pt}
+
+\item{ \textbf{Communication:} Excelled in written and verbal communication skills
+{\begin{itemize}\setlength\itemindent{6pt}
+	\item Developed through delivering regular presentations, debating, writing reports, and scientific documentation
+	\item Represented the ATLAS and CMS collaborations in various prestigious national and international conferences
+	\item Passionately explained research/data analysis to non-technical audiences as an official CERN visit guide
+\end{itemize}}%
+}
+
+\vspace{6pt}
+
+\item {\textbf{Teaching:} Taught and mentored students at various levels, nourishing their independent and critical thinking abilities
+{\begin{itemize}\setlength\itemindent{6pt} 
+	 \item Served as a teaching assistant for undergraduate physics courses and as a grader for graduate courses
+	 \item Mentored a number of successful Ph.D. students from all over the world
+\end{itemize}}%
+}
+
+\vspace{6pt}
+
+\item {\textbf{Languages:} Turkish (Native), English (Full Professional Proficiency), French (Elementary Proficiency)}
+
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Positions held...
+\section{Positions Held}
+
+\begin{itemize}
+
+\item{%
+\cventry{2012--\phantom{0000}}{Post-Doctoral Research Scholar}%
+{\begin{tabular}{l}University of California, Irvine \\ European Organization for Nuclear Research (CERN) \end{tabular}}%
+{\begin{tabular}{r}United States \\ Switzerland \end{tabular}}%
+{}%
+{}%
+}
+
+\item{%
+\cventry{2008--2012}{Research Assistant}%
+{\begin{tabular}{l}Iowa State University and Brookhaven National Laboratory \\ European Organization for Nuclear Research (CERN) \end{tabular}}%
+{\begin{tabular}{r}United States \\Switzerland \end{tabular}}%
+{}%
+{}%
+}
+
+\item{%
+\cventry{2006--2008}{Teaching Assistant}%
+{\begin{tabular}{l}Iowa State University \end{tabular}}%
+{\begin{tabular}{r}United States \end{tabular}}%
+{}%
+{}%
+}
+
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Education...
+\section{Education}
+
+\begin{itemize}
+
+\item{\cventry{2006--2012}{Ph.D. in High Energy Physics}{Iowa State University}{United States}{}{}}
+
+\item{\cventry{2002--2006}{B.Sc. in Physics with High Honors}{Middle East Technical University}{Turkey}{}{}}
+
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\section{References}
+%
+%\vspace{6pt}
+% 
+%\begin{itemize}
+%
+%\item{Up to 4 references available on request}
+%
+%\end{itemize}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
+
+
+%% end of file `template.tex'.
