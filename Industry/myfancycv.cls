@@ -47,6 +47,7 @@
 \newcommand{\cvmail}[1]{\renewcommand{\cvmail}{#1}}
 \newcommand{\cvlinkedin}[1]{\renewcommand{\cvlinkedin}{#1}}
 \newcommand{\cvgithub}[1]{\renewcommand{\cvgithub}{#1}}
+\newcommand{\cvwebpage}[1]{\renewcommand{\cvwebpage}{#1}}
 
 %----------------------------------------------------------------------------------------
 % 	 HEADER LAYOUT
@@ -61,13 +62,15 @@
 	\ifthenelse{\equal{\cvaddress}		{}}{}{ \textcolor{darkgray}{\cvaddress} } \\
 	\vspace{2mm}	
 	\ifthenelse{\equal{\cvnumberphone}	{}}{}{ \textnormal{\faMobile} \textcolor{darkgray}{\cvnumberphone} }
-	\ifthenelse{\equal{\cvmail}			{}}{}{ \textnormal{\textcolor{yt}{\faEnvelopeO}} \href{mailto:\cvmail}{\textcolor{darkgray}{\cvmail}} }
+	\ifthenelse{\equal{\cvwebpage}		{}}{}{ \textnormal{\faHome} \href{\cvwebpage}{\textcolor{darkgray}{\cvwebpage}} }
+	\ifthenelse{\equal{\cvmail}			{}}{}{ \textnormal{\textcolor{yt}{\faEnvelopeO}} \href{mailto:\cvmail}{\textcolor{darkgray}{\cvmail}} } \\
+	\vspace{2mm}	
 	\ifthenelse{\equal{\cvgithub}		{}}{}{ \textnormal{\faGithub} \href{https://www.github.com\cvgithub}{\textcolor{darkgray}{\cvgithub}} }
-	\ifthenelse{\equal{\cvlinkedin}		{}}{}{ \textnormal{\textcolor{linkedin}{\faLinkedin}} \href{https://www.linkedin.com\cvlinkedin}{\textcolor{darkgray}{\cvlinkedin}} }
+	\ifthenelse{\equal{\cvlinkedin}		{}}{}{ \textnormal{\textcolor{linkedin}{\faLinkedin}} \href{https://www.linkedin.com\cvlinkedin}{\textcolor{darkgray}{\cvlinkedin}} } 
   \end{center}
 
   %------------------------------------------------
-  \vspace{3mm}
+  %\vspace{3mm}
 }
 
 %----------------------------------------------------------------------------------------
