@@ -60,11 +60,11 @@
 	\vspace{2mm}
 	\large
 	\ifthenelse{\equal{\cvaddress}		{}}{}{ \textcolor{darkgray}{\cvaddress} } \\
-	\vspace{2mm}	
+	\vspace{1mm}	
 	\ifthenelse{\equal{\cvnumberphone}	{}}{}{ \textnormal{\faMobile} \textcolor{darkgray}{\cvnumberphone} }
 	\ifthenelse{\equal{\cvwebpage}		{}}{}{ \textnormal{\faHome} \href{\cvwebpage}{\textcolor{darkgray}{\cvwebpage}} }
 	\ifthenelse{\equal{\cvmail}			{}}{}{ \textnormal{\textcolor{yt}{\faEnvelopeO}} \href{mailto:\cvmail}{\textcolor{darkgray}{\cvmail}} } \\
-	\vspace{2mm}	
+	\vspace{1mm}	
 	\ifthenelse{\equal{\cvgithub}		{}}{}{ \textnormal{\faGithub} \href{https://www.github.com\cvgithub}{\textcolor{darkgray}{\cvgithub}} }
 	\ifthenelse{\equal{\cvlinkedin}		{}}{}{ \textnormal{\textcolor{linkedin}{\faLinkedin}} \href{https://www.linkedin.com\cvlinkedin}{\textcolor{darkgray}{\cvlinkedin}} } 
   \end{center}
@@ -97,16 +97,12 @@
 %	 JOB/EDUCATION ENTRIES
 %----------------------------------------------------------------------------------------
 \newcommand*{\cventry}[7][0.25em]{
-  \hspace*{-0.6em}\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
-    {\bfseries #4} & {\bfseries #5}\\%
-    {\itshape #3\ifthenelse{\equal{#6}{}}{}{, #6}} & {\itshape #2}\\%
-  \end{tabular*}%
-  \ifx&#7&%
-  \else{\\%
-    \begin{minipage}{\textwidth}%
-      \small#7%
-    \end{minipage}}\fi%
-  \par\addvspace{#1}}
+\hspace*{-0.6em}\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
+	{\bfseries #2} & {\bfseries #3}\\%
+	{\itshape #4} & {\itshape #5}%
+	\ifthenelse{\equal{#6}{}}{}{\\ {\itshape #6} & {\itshape #7}}%
+    \end{tabular*}%
+    \par\addvspace{#1}}
 
 %----------------------------------------------------------------------------------------
 %	 MARGINS AND LINKS
